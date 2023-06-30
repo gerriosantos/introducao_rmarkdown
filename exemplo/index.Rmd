@@ -1,0 +1,150 @@
+---
+title: "Untitled"
+author: "Gerrio Barbosa"
+date: "`r Sys.Date()`"
+output: 
+    html_document:
+      theme: united
+      # highlight: monochrome
+      highlight: tango
+      toc: true
+---
+
+```{r setup, include=FALSE, }
+knitr::opts_chunk$set(echo = TRUE, fig.align='center', message=FALSE, warning=FALSE)
+```
+
+## R Markdown
+
+
+### Código Chunk
+
+```{r}
+x <- 10
+y <- 20
+soma <- x + y
+soma
+```
+
+
+```{r, eval=FALSE}
+x <- 10
+y <- 20
+soma <- x + y
+soma
+```
+
+### Inserir Imagens
+
+- Incluindo o código no relatório.
+
+```{r}
+
+knitr::include_graphics(path = 'figures/teste_fig.png')
+
+```
+
+
+- Retirando o código
+
+```{r, echo=FALSE}
+
+knitr::include_graphics(path = 'figures/teste_fig.png')
+
+```
+
+
+- Retirando a foto e dexando somente o código.
+
+
+```{r, echo=FALSE, out.width='70%', fig.align='center'}
+
+library(ggplot2)
+
+ggplot(mtcars, aes(x = cyl, y = mpg, size = mpg)) +
+  geom_point() + 
+  theme_dark() +
+  labs(x = 'Consumo de Combustível', y = 'Números de Cilindros')
+
+
+```
+
+
+
+### Inserir Tabelas
+
+
+| Coluna 1 | Coluna 2 |
+|----------|----------|
+| Dado 1   | Dado 2   |
+| Dado 3   | Dado 4   |
+
+
+- Usando o pacote `knitr`.
+
+
+```{r}
+
+df <- mtcars |>  
+  tibble::rownames_to_column(var = 'Carros') |> 
+  tibble::as_tibble() |> 
+  dplyr::group_by(Carros, cyl) |> 
+  dplyr::summarise(mpg = mean(mpg))
+
+knitr::kable(x = df, digits = 2, caption = 'Consumo Médio de Combustível por Carros e Cilindros', align = 'c', col.names = c('Carros', 'Cilindros', 'Cons. Combustíveis')) 
+
+```
+
+
+### Inserir Listas
+
+#### Numeradas
+
+
+
+1. Item 1
+
+2. Item 2
+
+3. Item 3
+
+4. Item 4
+
+
+#### Não Numeradas
+
+
+- Item 1
+
+  - Subitem 1
+  
+     - Subsubitem 1
+     
+        - Subsubsubitem 1
+  
+  
+- Item 2
+
+   a. Subitem 1
+   
+- Item 3
+
+   i) Subitem 1
+   
+   
+   
+### Inserir Fórmulas Matemáticas
+
+$f(x) = y = \alpha + \beta X + \epsilon$
+
+
+
+### Personalizando a Aparência do Documento
+
+
+
+
+
+
+
+
