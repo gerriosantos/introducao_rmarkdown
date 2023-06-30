@@ -1,20 +1,128 @@
 ---
-title: "Untitled"
+title: "Introdução ao R Markdown"
 author: "Gerrio Barbosa"
 date: "`r Sys.Date()`"
 output: 
     html_document:
-      theme: united
+      # theme: lumen
       # highlight: monochrome
       highlight: tango
       toc: true
+      toc_depth: 3 # explicita quantos indices irá ter no sumário
+      #toc_float: true # cabeçalho sempre visivel quando rolar o relatorio
+      
+    # customizados
+    # prettydoc::html_pretty:
+    #   theme: architect
+    #   highlight: github
+    #   #highlight: vignette
+    #   toc: true
+    
+    # Documento PDF
+      # pdf_document:
+      # geometry: "top=2cm, bottom=2cm, left=2cm, right=2cm"
+    
+    # Documento Word
+      # word_document:
+      #   geometry: "top=2cm, bottom=2cm, left=2cm, right=2cm"
+        
+      
+    
+    
 ---
 
 ```{r setup, include=FALSE, }
 knitr::opts_chunk$set(echo = TRUE, fig.align='center', message=FALSE, warning=FALSE)
 ```
 
+
+# Relatório no `R Markdown`
+
+
+
 ## R Markdown
+
+
+### Syntax Markdown 
+
+
+- Linhas com dois espaços para iniciar um parágrafo.
+
+- Texto em *itálico* (`*italico*` ou `_itálico_`)
+
+- Texto em __negrito__ (`**negrito**` ou `__negrito__`)
+
+- Texto ~~riscado~~ (`~~riscado~~`)
+
+- Subscrito^2^ (`subscrito^2^`)
+
+- [link](https://quarto.org/)  `[link](https://quarto.org/)`
+
+
+### Cabeçalhos 
+
+
+- # Cabeçalho 1
+
+- ## Cabeçalho 2
+
+- ### Cabeçalho 3
+
+- #### Cabeçalho 4
+
+- ##### Cabeçalho 5
+
+- ###### Cabeçalho 6
+
+
+
+
+
+
+
+
+
+### Inserir Listas
+
+#### Numeradas
+
+
+
+1. Item 1
+
+2. Item 2
+
+3. Item 3
+
+4. Item 4
+
+
+#### Não Numeradas
+
+
+- Item 1
+
+  - Subitem 1
+  
+     - Subsubitem 1
+     
+        - Subsubsubitem 1
+  
+  
+- Item 2
+
+   a. Subitem 1
+   
+- Item 3
+
+   i) Subitem 1
+   
+   
+   
+### Inserir Fórmulas Matemáticas
+
+$f(x) = y = \alpha + \beta X + \epsilon$
+
 
 
 ### Código Chunk
@@ -43,6 +151,19 @@ soma
 knitr::include_graphics(path = 'figures/teste_fig.png')
 
 ```
+
+
+### Inserir Gif
+
+```{r, fig.align='center'}
+
+knitr::include_graphics(path = 'figures/luffy_gif_3.gif')
+
+```
+
+
+### Mudança nos Chunks
+
 
 
 - Retirando o código
@@ -96,50 +217,11 @@ knitr::kable(x = df, digits = 2, caption = 'Consumo Médio de Combustível por C
 ```
 
 
-### Inserir Listas
-
-#### Numeradas
-
-
-
-1. Item 1
-
-2. Item 2
-
-3. Item 3
-
-4. Item 4
-
-
-#### Não Numeradas
-
-
-- Item 1
-
-  - Subitem 1
-  
-     - Subsubitem 1
-     
-        - Subsubsubitem 1
-  
-  
-- Item 2
-
-   a. Subitem 1
-   
-- Item 3
-
-   i) Subitem 1
-   
-   
-   
-### Inserir Fórmulas Matemáticas
-
-$f(x) = y = \alpha + \beta X + \epsilon$
 
 
 
 ### Personalizando a Aparência do Documento
+
 
 
 
