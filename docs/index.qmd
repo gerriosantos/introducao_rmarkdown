@@ -295,3 +295,5 @@ output:
 
 - [Relatórios Curso-R](https://livro.curso-r.com/9-relatorios.html)
 
+- [Slide Beatriz Milz](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/#37)
+
