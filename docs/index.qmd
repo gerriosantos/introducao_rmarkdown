@@ -8,7 +8,9 @@ title: "Introdução ao R Markdown"
 subtitle: "Usando **R** para Relatórios"
 author: "Dr. Gerrio Barbosa"
 institute: "Núcleo de Estudos Raciais (NERI) - Insper e Pós-Doc FGV-RJ"
-logo: logo_NERI.jpeg
+logo: logo_gerrio.png
+css: css_logo_size.css
+
 footer: "@econodata_r"
 incremental: true
 execute:
@@ -29,7 +31,7 @@ editor: visual
 
 ## Visão geral do R Markdown
 
--   É a junação da linguagem `Markdown` com código do `R`
+-   É a junção da linguagem `Markdown` com código do `R`
 
 -   Criado e mantido pela [Posit](https://posit.co/products/open-source/rpackages/)
 
