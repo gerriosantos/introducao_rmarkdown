@@ -400,7 +400,7 @@
 Dr.&nbsp;Gerrio Barbosa 
 </div>
         <p class="quarto-title-affiliation">
-            Núcleo de Estudos Raciais (NERI) - Insper
+            Núcleo de Estudos Raciais (NERI) - Insper e Pós-Doc FGV-RJ
           </p>
     </div>
 </div>
@@ -458,7 +458,64 @@ Dr.&nbsp;Gerrio Barbosa
 <ul>
 <li class="fragment"><p>Pode escolher a Saída (HTML, PDF, Word, etc.).</p></li>
 <li class="fragment"><p>Controle de exibição de resultados definir opcões de chunk. Ver o <a href="https://yihui.org/knitr/options/">Chunk options and package options</a>.</p></li>
-</ul></section><section id="inserindo-resultados" class="slide level2"><h2>Inserindo Resultados</h2>
+</ul></section><section id="syntax-markdown" class="slide level2 smaller"><h2>Syntax Markdown</h2>
+<ul>
+<li class="fragment"><p>Linhas com dois espaços para iniciar um parágrafo.</p></li>
+<li class="fragment"><p>Texto em <em>itálico</em> (<code>*italico*</code> ou <code>_itálico_</code>)</p></li>
+<li class="fragment"><p>Texto em <strong>negrito</strong> (<code>**negrito**</code> ou <code>__negrito__</code>)</p></li>
+<li class="fragment"><p>Texto <del>riscado</del> (<code>~~riscado~~</code>)</p></li>
+<li class="fragment"><p>Subscrito<sup>2</sup> (<code>subscrito^2^</code>)</p></li>
+<li class="fragment"><p><a href="https://quarto.org/">link</a> <code>[link](https://quarto.org/)</code></p></li>
+</ul></section><section id="cabeçalhos" class="slide level2 smaller"><h2>Cabeçalhos</h2>
+<ul>
+<li class="fragment"><p><code># Cabeçalho 1</code></p></li>
+<li class="fragment"><p><code>## Cabeçalho 2</code></p></li>
+<li class="fragment"><p><code>### Cabeçalho 3</code></p></li>
+<li class="fragment"><p><code>#### Cabeçalho 4</code></p></li>
+<li class="fragment"><p><code>##### Cabeçalho 5</code></p></li>
+<li class="fragment"><p><code>###### Cabeçalho 6</code></p></li>
+</ul></section><section id="inserir-listas-e-sublistas" class="slide level2"><h2>Inserir Listas e Sublistas</h2>
+<ol type="1">
+<li class="fragment">
+<p>Item 1</p>
+<ul>
+<li class="fragment">
+<p>subitem 1</p>
+<ul>
+<li class="fragment">
+<p>subitem 2</p>
+<ul>
+<li class="fragment">subitem 3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="fragment">
+<p>Item 2</p>
+<ol type="a">
+<li class="fragment">subitem 1</li>
+</ol>
+</li>
+<li class="fragment"><p>Item 3</p></li>
+</ol></section><section id="inserindo-fórmulas-matemáticas" class="slide level2"><h2>Inserindo Fórmulas Matemáticas</h2>
+
+<img data-src="figures/08-formula_mat.png" class="r-stretch"><p><span class="math display">\[f(x) = y = \alpha + \beta X + \epsilon\]</span></p>
+</section><section id="inserir-imagens" class="slide level2"><h2>Inserir Imagens</h2>
+<ul>
+<li class="fragment">Incluindo o código no relatório.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<details open=""><summary></summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="at">path =</span> <span class="st">'figures/teste_fig.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<img data-src="figures/teste_fig.png" width="450" class="r-stretch quarto-figure-center"></section><section id="inserir-gif" class="slide level2"><h2>Inserir Gif</h2>
+<div class="cell" data-layout-align="center">
+<details open=""><summary></summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="at">path =</span> <span class="st">'figures/luffy_gif_2.gif'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<img data-src="figures/luffy_gif_2.gif" class="r-stretch quarto-figure-center"></section><section id="inserindo-resultados" class="slide level2"><h2>Inserindo Resultados</h2>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -507,53 +564,54 @@ Dr.&nbsp;Gerrio Barbosa
 <li class="fragment"><p><code>reactable</code></p></li>
 <li class="fragment"><p><code>flextable</code></p></li>
 <li class="fragment"><p><code>kableExtra</code></p></li>
-</ul></section><section id="inserir-listas-e-sublistas" class="slide level2"><h2>Inserir Listas e Sublistas</h2>
-<ol type="1">
-<li class="fragment">
-<p>Item 1</p>
+</ul></section><section id="personalizando-a-aparência-do-documento" class="slide level2 smaller"><h2>Personalizando a Aparência do Documento</h2>
 <ul>
 <li class="fragment">
-<p>subitem 1</p>
+<p>Usando <code>theme</code> para especificar o tema:</p>
 <ul>
-<li class="fragment">
-<p>subitem 2</p>
-<ul>
-<li class="fragment">subitem 3</li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="fragment"><p>default, bootstrap, cerulean, cosmo, darkly, flatly, journal, lumen, paper, readable, sandstone, simplex, spacelab, united e yeti.</p></li>
+<li class="fragment"><p>Usar <code>CSS</code> para customizar seus próprios temas.</p></li>
 </ul>
 </li>
 <li class="fragment">
-<p>Item 2</p>
-<ol type="a">
-<li class="fragment">subitem 1</li>
-</ol>
+<p>Usando <code>highlight</code> o estilo da sintaxe:</p>
+<ul>
+<li class="fragment">
+<code>default</code>, <code>tango</code>, <code>pygments</code>, <code>kate</code>, <code>monochrome</code>, <code>espresso</code>, <code>zenburn</code>, <code>haddock</code>, <code>breezedarke</code> e <code>textmate</code>.</li>
+</ul>
 </li>
-<li class="fragment"><p>Item 3</p></li>
-</ol></section><section id="inserindo-fórmulas-matemáticas" class="slide level2"><h2>Inserindo Fórmulas Matemáticas</h2>
-
-<img data-src="figures/08-formula_mat.png" class="r-stretch"><p><span class="math display">\[f(x) = y = \alpha + \beta X + \epsilon\]</span></p>
-</section><section id="personalizando-a-aparência-do-documento" class="slide level2"><h2>Personalizando a Aparência do Documento</h2>
-</section></section><section><section id="utilizando-templates-e-temas" class="title-slide slide level1 center"><h1>Utilizando templates e temas</h1>
-
-</section><section id="personalizando-estilos-e-layouts" class="slide level2"><h2>Personalizando estilos e layouts</h2>
-</section><section id="adicionando-elementos-visuais-imagens-links-etc." class="slide level2"><h2>Adicionando elementos visuais (imagens, links, etc.)</h2>
-</section><section id="trabalhando-com-relatórios-dinâmicos" class="slide level2"><h2>Trabalhando com Relatórios Dinâmicos</h2>
-</section></section><section><section id="utilizando-parâmetros-e-variáveis" class="title-slide slide level1 center"><h1>Utilizando parâmetros e variáveis</h1>
-
-</section><section id="criando-relatórios-interativos" class="slide level2"><h2>Criando relatórios interativos</h2>
-</section><section id="gerando-relatórios-automatizados" class="slide level2"><h2>Gerando relatórios automatizados</h2>
-</section></section><section id="referências" class="title-slide slide level1 center"><h1>Referências</h1>
+</ul></section><section id="pacotes-com-outros-temas" class="slide level2 smaller"><h2>Pacotes com Outros Temas</h2>
+<ul>
+<li class="fragment">Podem ser utilizados temas prontos que deixam os relatórios customizados:</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<details open=""><summary></summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>output<span class="sc">:</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  prettydoc<span class="sc">::</span>html_pretty<span class="sc">:</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>    theme<span class="sc">:</span> architect</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<ul>
+<li class="fragment">
+<p>Outros temas:</p>
+<ul>
+<li class="fragment"><code>cayman:</code></li>
+<li class="fragment"><code>tactile:</code></li>
+<li class="fragment"><code>leonids:</code></li>
+<li class="fragment"><code>hpstr:</code></li>
+</ul>
+</li>
+<li class="fragment"><p><a href="https://prettydoc.statr.me/themes.html"><code>Themes</code> do pacote <code>prettydoc</code></a></p></li>
+</ul>
+<!-- # Utilizando templates e temas --><!-- ## Personalizando estilos e layouts --><!-- ## Adicionando elementos visuais (imagens, links, etc.) --><!-- ## Trabalhando com Relatórios Dinâmicos --><!-- # Utilizando parâmetros e variáveis --><!-- ## Criando relatórios interativos --><!-- ## Gerando relatórios automatizados --></section></section><section id="referências" class="title-slide slide level1 center"><h1>Referências</h1>
 <ul>
 <li class="fragment"><p><a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></p></li>
 <li class="fragment"><p><a href="http://sillasgonzaga.com/material/cdr/rmarkdown.html">Ciência de Dados com R</a></p></li>
 <li class="fragment"><p><a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">Reference Guide</a></p></li>
+<li class="fragment"><p><a href="https://livro.curso-r.com/9-relatorios.html">Relatórios Curso-R</a></p></li>
 </ul>
 
 <img src="logo_NERI.jpeg" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><span class="citation" data-cites="gerriosantos">@gerriosantos</span></p>
+<p><span class="citation" data-cites="econodata_r">@econodata_r</span></p>
 </div>
 </section>
 </div>

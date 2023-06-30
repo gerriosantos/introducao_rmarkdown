@@ -7,9 +7,9 @@ title: "Introdução ao R Markdown"
 
 subtitle: "Usando **R** para Relatórios"
 author: "Dr. Gerrio Barbosa"
-institute: "Núcleo de Estudos Raciais (NERI) - Insper"
+institute: "Núcleo de Estudos Raciais (NERI) - Insper e Pós-Doc FGV-RJ"
 logo: logo_NERI.jpeg
-footer: "@gerriosantos"
+footer: "@econodata_r"
 incremental: true
 execute:
   echo: true
@@ -110,7 +110,87 @@ rmarkdown::render('exemplo/index.Rmd')
  
  - Controle de exibição de resultados definir opcões de chunk. Ver o [Chunk options and package options](https://yihui.org/knitr/options/).
  
----
+
+## Syntax Markdown {.smaller}
+
+
+- Linhas com dois espaços para iniciar um parágrafo.
+
+- Texto em *itálico* (`*italico*` ou `_itálico_`)
+
+- Texto em __negrito__ (`**negrito**` ou `__negrito__`)
+
+- Texto ~~riscado~~ (`~~riscado~~`)
+
+- Subscrito^2^ (`subscrito^2^`)
+
+- [link](https://quarto.org/)  `[link](https://quarto.org/)`
+
+
+## Cabeçalhos {.smaller}
+
+
+- `# Cabeçalho 1`
+
+- `## Cabeçalho 2`
+
+- `### Cabeçalho 3`
+
+- `#### Cabeçalho 4`
+
+- `##### Cabeçalho 5`
+
+- `###### Cabeçalho 6`
+
+
+
+
+## Inserir Listas e Sublistas
+
+1. Item 1
+
+   - subitem 1
+   
+      - subitem 2
+      
+         - subitem 3
+
+2. Item 2
+
+   a. subitem 1
+
+3. Item 3
+
+
+## Inserindo Fórmulas Matemáticas
+
+
+![](figures/08-formula_mat.png)
+
+
+$$f(x) = y = \alpha + \beta X + \epsilon$$
+
+
+
+## Inserir Imagens
+
+- Incluindo o código no relatório.
+
+```{r, fig.align='center'}
+
+knitr::include_graphics(path = 'figures/teste_fig.png')
+
+```
+
+## Inserir Gif
+
+```{r, fig.align='center'}
+
+knitr::include_graphics(path = 'figures/luffy_gif_2.gif')
+
+```
+
+
 ## Inserindo Resultados
 
 ::: {layout-nrow=2}
@@ -152,52 +232,66 @@ rmarkdown::render('exemplo/index.Rmd')
 - `kableExtra`
 
 
-## Inserir Listas e Sublistas
 
-1. Item 1
 
-   - subitem 1
+## Personalizando a Aparência do Documento {.smaller}
+
+- Usando `theme` para especificar o tema:
+
+   - default, bootstrap, cerulean, cosmo, darkly, flatly, journal, lumen, paper, readable, sandstone, simplex, spacelab, united e yeti.
    
-      - subitem 2
-      
-         - subitem 3
+   - Usar `CSS` para customizar seus próprios temas.
+   
+- Usando `highlight` o estilo da sintaxe:
 
-2. Item 2
-
-   a. subitem 1
-
-3. Item 3
+   - `default`, `tango`, `pygments`, `kate`, `monochrome`, `espresso`, `zenburn`, `haddock`, `breezedarke` e `textmate`.
 
 
-## Inserindo Fórmulas Matemáticas
+
+## Pacotes com Outros Temas {.smaller}
+
+- Podem ser utilizados temas prontos que deixam os relatórios customizados:
+
+```{r, eval=FALSE, fig.align='center', out.width='100%'}
+
+output:
+  prettydoc::html_pretty:
+    theme: architect
+
+```
+
+- Outros temas:
+
+   - `cayman:`
+   - `tactile:`
+   - `leonids:` 
+   - `hpstr:`
+
+- [`Themes` do pacote `prettydoc`](https://prettydoc.statr.me/themes.html)
 
 
-![](figures/08-formula_mat.png)
 
+<!-- # Utilizando templates e temas -->
 
-$$f(x) = y = \alpha + \beta X + \epsilon$$
+<!-- ## Personalizando estilos e layouts -->
 
+<!-- ## Adicionando elementos visuais (imagens, links, etc.) -->
 
-## Personalizando a Aparência do Documento
+<!-- ## Trabalhando com Relatórios Dinâmicos -->
 
-# Utilizando templates e temas
+<!-- # Utilizando parâmetros e variáveis -->
 
-## Personalizando estilos e layouts
+<!-- ## Criando relatórios interativos -->
 
-## Adicionando elementos visuais (imagens, links, etc.)
-
-## Trabalhando com Relatórios Dinâmicos
-
-# Utilizando parâmetros e variáveis
-
-## Criando relatórios interativos
-
-## Gerando relatórios automatizados
+<!-- ## Gerando relatórios automatizados -->
 
 # Referências
 
--   [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
 
--   [Ciência de Dados com R](http://sillasgonzaga.com/material/cdr/rmarkdown.html)
+- [Ciência de Dados com R](http://sillasgonzaga.com/material/cdr/rmarkdown.html)
 
--   [Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+- [Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+
+- [Relatórios Curso-R](https://livro.curso-r.com/9-relatorios.html)
+
